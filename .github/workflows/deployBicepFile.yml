@@ -4,9 +4,6 @@ jobs:
   build-and-deploy:
     runs-on: windows-latest
     steps:
-
-      #install CLI
-    - uses: elstudio/action-install-azure-cli@main
       # Checkout code
     - uses: actions/checkout@main
 
