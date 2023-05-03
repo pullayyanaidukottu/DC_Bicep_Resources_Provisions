@@ -2,7 +2,7 @@ on: [push]
 name: Azure ARM
 jobs:
   build-and-deploy:
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
     steps:
 
       #install CLI
@@ -11,7 +11,7 @@ jobs:
     - uses: actions/checkout@main
 
       # Log into Azure
-    - uses: azure/login@v1
+    - uses: azure/login@v1.4.3
       with:
         creds: ${{ secrets.AZURE_CREDENTIALS }}
 
